@@ -131,5 +131,3 @@ def drawCircle(win, centre, radius, colour):
 def drawColouredEye(win, centre, radius, colour):
     pass
     # remove the pass and add your code here
-
-#  solution to programming exercise:
