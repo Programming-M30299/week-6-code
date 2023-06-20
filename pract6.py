@@ -1,40 +1,135 @@
-def sayHello():
-    print("Hello World")
+from graphics import *
 
 
-def sayHello2():
-    print("Hello")
-    print("World")
+def greet(name):
+    print("Hello", name + ".")
+    if len(name) > 20:
+        print("That's a long name!")
 
 
-def sayBye():
-    print("Goodbye Mars")
+def canYouVote(age):
+    if age >= 18:
+        print("You can vote")
+    else:
+        print("Sorry, you can't vote")
 
 
-# TODO: Write `sayBye2` function here
+def getDegreeClass(mark):
+    if mark >= 70:
+        return "1st"
+    elif mark >= 60:
+        return "2:1"
+    elif mark >= 50:
+        return "2:2"
+    elif mark >= 40:
+        return "3rd"
+    else:
+        return "Fail"
+
+# We'll simplify this isLeapYear function in a later lecture / tutorial.
 
 
-# A simple kilograms to ounces conversion program
-# It asks for a weight in kilograms (for example 10)
-# and converts it to ounces (352.74)
-def kilos2Ounces():
-    kilos = float(input("Enter a weight in kilograms: "))
-    ounces = kilos * 35.274
-    print("The weight in ounces is", ounces)
+def isLeapYear(year):
+    if year % 4 != 0:
+        return False
+    elif year % 100 != 0:
+        return True
+    elif year % 400 != 0:
+        return False
+    else:
+        return True
 
 
-def count():
-    for number in range(10):
-        print("Number is now: ", number)
+def daysInMonth(month, year):
+    if month == 4 or month == 6 or month == 9 or month == 11:
+        return 30
+    elif month == 2:
+        if isLeapYear(year):
+            return 29
+        else:
+            return 28
+    else:
+        return 31
 
 
-# A simple euros to pounds conversion program
-# It asks for a value in euros (for example 10)
-# and converts it to pounds (8.7)
-def euros2Pounds():
-    euros = float(input("Enter a value in euros: "))
-    pounds = euros * 0.87
-    print("The value in pounds is", pounds)
+def overlyComplexDaysInMonth(month, year):
+    if month == 1 or month == 3 or month == 5 or month == 7 or \
+       month == 8 or month == 10 or month == 12:
+        return 31
+    elif month == 4 or month == 6 or month == 9 or month == 11:
+        return 30
+    elif isLeapYear(year):
+        return 29
+    else:
+        return 28
 
 
-# TODO: Write `dollars2Pounds` and the rest of your solutions for the programming exercises here
+def helloLoop():
+    for ch in "Hello World":
+        print("ch is {}".format(ch))
+    # for i in [1, 9, 7, 8]:
+    #     print("i is {}".format(i))
+    # for i in range(10):
+    #     print("i is {}".format(i))
+    #     print("Hello")
+
+
+def updatedLoop():
+    for i in range(1, 11, 2):
+        print(i)
+    # for i in range(1, 11):
+    #     print(i)
+    # for i in range(10):
+    #     print(i + 1)
+
+
+def countDown():
+    for i in range(10, 0, -1):
+        print("{} ...".format(i), end=" ")
+    print("Blast Off!")
+
+
+def exerciseRoutine():
+    for day in range(1, 8):  # Outer loop (days)
+        print("Currently on day {}".format(day))
+        for exercise in range(1, 4):  # Inner loop (exercises)
+            print("\tDoing exercise{} of day {}".format(exercise, day))
+
+
+def numberedTriangle(n):
+    for i in range(1, n + 1):
+        for j in range(1, i + 1):
+            print(j, end=" ")
+        print()
+
+
+def drawPatch():
+    win = GraphWin("Patch", 100, 100)
+    for y in range(10, 100, 20):
+        for x in range(10, 100, 20):
+            circle = Circle(Point(x, y), 10)
+            circle.draw(win)
+
+            if (y == 30 or y == 70) and x >= 30 and x <= 70:
+                circle.setFill("red")
+            elif y == 50 and x >= 30 and x <= 70:
+                circle.setFill("blue")
+            else:
+                circle.setFill("green")
+
+# For exercises 8 & 11
+
+
+def drawCircle(win, centre, radius, colour):
+    circle = Circle(centre, radius)
+    circle.setFill(colour)
+    circle.setWidth(2)
+    circle.draw(win)
+
+
+# For exercise 8
+def drawColouredEye(win, centre, radius, colour):
+    pass
+    # remove the pass and add your code here
+
+#  solution to programming exercise:
