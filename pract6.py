@@ -26,9 +26,8 @@ def getDegreeClass(mark):
     else:
         return "Fail"
 
+
 # We'll simplify this isLeapYear function in a later lecture / tutorial.
-
-
 def isLeapYear(year):
     if year % 4 != 0:
         return False
@@ -67,8 +66,10 @@ def overlyComplexDaysInMonth(month, year):
 def helloLoop():
     for ch in "Hello World":
         print("ch is {}".format(ch))
+
     # for i in [1, 9, 7, 8]:
     #     print("i is {}".format(i))
+
     # for i in range(10):
     #     print("i is {}".format(i))
     #     print("Hello")
@@ -77,8 +78,10 @@ def helloLoop():
 def updatedLoop():
     for i in range(1, 11, 2):
         print(i)
+
     # for i in range(1, 11):
     #     print(i)
+
     # for i in range(10):
     #     print(i + 1)
 
@@ -117,9 +120,8 @@ def drawPatch():
             else:
                 circle.setFill("green")
 
+
 # For exercises 8 & 11
-
-
 def drawCircle(win, centre, radius, colour):
     circle = Circle(centre, radius)
     circle.setFill(colour)
