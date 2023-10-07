@@ -27,7 +27,7 @@ def getDegreeClass(mark):
         return "Fail"
 
 
-# We'll simplify this isLeapYear function in a later lecture / tutorial.
+# We will simplify this function later in the term
 def isLeapYear(year):
     if year % 4 != 0:
         return False
