@@ -65,7 +65,7 @@ def overlyComplexDaysInMonth(month, year):
 
 def countDown():
     for i in range(10, 0, -1):
-        print("{} ...".format(i), end=" ")
+        print(i, "...", end=" ")
     print("Blast Off!")
 
 
