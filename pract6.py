@@ -69,13 +69,6 @@ def countDown():
     print("Blast Off!")
 
 
-def exerciseRoutine():
-    for day in range(1, 8):  # Outer loop (days)
-        print("Currently on day {}".format(day))
-        for exercise in range(1, 4):  # Inner loop (exercises)
-            print("\tDoing exercise{} of day {}".format(exercise, day))
-
-
 def numberedTriangle(n):
     for i in range(1, n + 1):
         for j in range(1, i + 1):
