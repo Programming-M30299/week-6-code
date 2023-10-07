@@ -63,29 +63,6 @@ def overlyComplexDaysInMonth(month, year):
         return 28
 
 
-def helloLoop():
-    for ch in "Hello World":
-        print("ch is {}".format(ch))
-
-    # for i in [1, 9, 7, 8]:
-    #     print("i is {}".format(i))
-
-    # for i in range(10):
-    #     print("i is {}".format(i))
-    #     print("Hello")
-
-
-def updatedLoop():
-    for i in range(1, 11, 2):
-        print(i)
-
-    # for i in range(1, 11):
-    #     print(i)
-
-    # for i in range(10):
-    #     print(i + 1)
-
-
 def countDown():
     for i in range(10, 0, -1):
         print("{} ...".format(i), end=" ")
