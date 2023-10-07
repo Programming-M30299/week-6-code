@@ -83,21 +83,6 @@ def numberedTriangle(n):
         print()
 
 
-def drawPatch():
-    win = GraphWin("Patch", 100, 100)
-    for y in range(10, 100, 20):
-        for x in range(10, 100, 20):
-            circle = Circle(Point(x, y), 10)
-            circle.draw(win)
-
-            if (y == 30 or y == 70) and x >= 30 and x <= 70:
-                circle.setFill("red")
-            elif y == 50 and x >= 30 and x <= 70:
-                circle.setFill("blue")
-            else:
-                circle.setFill("green")
-
-
 # For exercises 8 & 11
 def drawCircle(win, centre, radius, colour):
     circle = Circle(centre, radius)
