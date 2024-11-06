@@ -1,4 +1,5 @@
-from graphics import *
+from graphix import Circle
+# Remember to update the line above if you are using other Graphix objects
 
 
 def greet(name):
@@ -79,8 +80,8 @@ def numbered_triangle(n):
 # For exercises 8 & 11
 def draw_circle(win, centre, radius, colour):
     circle = Circle(centre, radius)
-    circle.setFill(colour)
-    circle.setWidth(2)
+    circle.fill_colour = colour
+    circle.outline_width = 2
     circle.draw(win)
 
 
